@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "DeanLab.com - a cms written in node.js, express, jade and hosted on heroku"
+date:   2015-10-14 14:07:15
+categories: jekyll node.js express
+---
+
+Recently I had a website of mine (deanlab.com) die because MongoLab had upgraded to MongoDb 3 and I had not kept up with the times.  Trying to reconstruct what I had done years ago was a challenge.  Just going to dump some of the setup here for future reference.
+
+database: MongoLab
+application server: Heroku
+image services: Cloudinary
+
+written in node.js, express, Jade
+
+
+
+[blogger]:         http://www.blogger.com
+[codegaucho blog]: http://blogger.codegaucho.com/
+[Using Jekyll with pages]: https://help.github.com/articles/using-jekyll-with-pages/
+[How I Built this Blog]: http://mekhami.com/jekyll/pages/github/blog/2015/07/10/How-I-Built-This-Blog.html
+[jekyll]:          http://jekyllrb.com
+[jekyll-gh]:       https://github.com/jekyll/jekyll
+[jekyll-help]:     https://github.com/jekyll/jekyll-help
