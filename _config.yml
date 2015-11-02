@@ -7,6 +7,21 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://codegaucho.com" # the base hostname & protocol for your site
 twitter_username: codegaucho
 github_username:  codegaucho
+cloudinary_id: codegaucho
+
+collections:
+  projects:
+    output: true
+
+defaults:
+  -
+    scope:
+      type: projects
+    values:
+      layout: project
+      image_options: "c_scale,w_320"
+      thumbnail_options: "c_scale,w_320"
+      active_nav: Projects
 
 # Build settings
 markdown: kramdown
