@@ -35,11 +35,11 @@ We initially wanted the naked domain to point to these github pages, but the rec
 
 First part is to add a CNAME record to our repository.  We created a CNAME for jekyll.pidley.com to our repository following the instructions found in [Adding a CNAME file to repository]
 
-Then back to Hover, and we go to the DNS section and add a CNAME for our subdomain jekyll
+Then back to Hover, and we go to the DNS section and add a CNAME for our subdomain jekyll to point it at pidley.github.io
 
-![Hover create subdomain](http://res.cloudinary.com/codegaucho/image/upload/v1446430587/pidley_create_CNAME_ekqpcs.png)
+![Hover create subdomain](http://res.cloudinary.com/codegaucho/image/upload/v1446432680/pidleyCNAME2_i63ujn.png)
 
-Waiting for this to take effect - could be several hours and I'm leaving and will be unavailable for the rest of the week, so will report on my return.
+This works very nicely.  Our github pages are served with addresses that look like http://jekyll.pidley.com/about/ 
 
 # Option 5: Custom apex domain
 
