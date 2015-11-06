@@ -41,6 +41,8 @@ Then back to Hover, and we go to the DNS section and add a CNAME for our subdoma
 
 This works very nicely.  Our github pages are served with addresses that look like http://jekyll.pidley.com/about/ 
 
+We then did a domain redirect (essentially option #1, but the naked domain to jekyll.pidley.com.  This pretty much gives us what we need for now
+
 # Option 5: Custom apex domain
 
 this option is not recommended by github.  Will give it a chance anyhow, and report on this soon.
