@@ -24,8 +24,5 @@ defaults:
       thumbnail_options: "c_scale,w_320"
       active_nav: Projects
 
-gems:
-  - jekyll-sitemap
-
 # Build settings
 markdown: kramdown
