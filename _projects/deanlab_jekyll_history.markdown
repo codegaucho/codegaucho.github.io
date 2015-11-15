@@ -2,6 +2,10 @@
 title: "The Dean Lab Website History"
 date:   2015-10-29 09:53:14
 categories: jekyll
+categories: jekyll
+imageid: v1446776849/profdeanblackboard_wblhve
+image_options: c_crop,h_261,w_634
+description: "A jekyll based website for The Dean Lab:  A nanoelectronics laborator out of Columbia University"
 ---
 
 We originally had built a simple node.js based CMS for managing the website for The Dean Lab, a nanoelectronics laboratory out of Columbia University.  This was to hold research, news equipment, and other information related to the interesting doings at The Dean Lab. 

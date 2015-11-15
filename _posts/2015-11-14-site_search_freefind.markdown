@@ -1,32 +1,19 @@
-<header >
-  <nav class="navbar navbar-dark bg-primary navbar-static-top bd-navbar" role="banner">
+---
+layout: post
+title:  "Site Search with FreeFind"
+date:   2015-11-14 11:11:15
+categories: jekyll codegaucho search
+---
 
-    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+For most of our sites, we are going to want some sort of site search.  There are a good few ways to handle this, here we are going to show how to use [freefind] to provide this service.
 
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"> &#9776;</button>
+First off, register your site with [freefind].  FreeFind provides some HTML and js snippets to do a dynamic modal based on search.  We used this as a starting point, but the style doesn't match bootstrap, so we had to make a couple of changes.
 
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2" >
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+In the navigator we can create a search input and button 
 
-        {% for page in site.pages %}
-          {% if page.title %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-
-      {% if site.freefind %}
+{% highlight bash %}
+{% raw %}
+{% if site.freefind %}
       <form id="ffresult_sbox1" class="form-inline navbar-form pull-right" method="get" action="http://search.freefind.com/find.html" onsubmit="ffresults.show(1);">
         <input type="hidden" name="si" value="{{site.freefind}}">
 		<input type="hidden" name="pid" value="r">
@@ -45,11 +32,14 @@
         </div>
       </form>
       {% endif %}
-    </div>
-  </nav>
-</header>
+{% endraw %}
+{% endhighlight %}
 
-<!-- start bootsrap modal for search results -->
+In the _config.yml, we add the freefind site id.
+
+Then we need to create a modal
+{% highlight bash %}
+{% raw %}
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="searchResultsModal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -72,4 +62,15 @@
     </div>
   </div>
 </div>
-<!-- end bootsrap modal for search results -->
+{% endraw %}
+{% endhighlight %}
+
+And finally, in the freefind javascript we need to open up the modal by adding 
+
+$('#searchResultsModal').modal('show');
+
+as the last line of the show method.  Much of the code in the FreeFind javascript is no longer needed once you rely on the bootstrap modal.  Fhe full example can be found in the [deanlab github repo]]
+
+
+[freefind]:      http://freefind.com
+[deanlab github repo]: https://github.com/deanlab/deanlab.github.io

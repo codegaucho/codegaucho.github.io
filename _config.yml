@@ -8,6 +8,7 @@ url: "http://codegaucho.com" # the base hostname & protocol for your site
 twitter_username: codegaucho
 github_username:  codegaucho
 cloudinary_id: codegaucho
+freefind: 80379214
 
 collections:
   projects:
