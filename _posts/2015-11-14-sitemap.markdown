@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Site Map"
+date:   2015-11-14 11:45:15
+categories: jekyll codegaucho search
+---
+
+For better search results and such, we wanted to include a sitemap.xml (of course). There is a gem plugin for this that is supposed to work just fine on ghpages.  I added this to my config, and it built a sitemap.xml as advertised, but two issues
+
+- the urls generated for my custom collections were not correct
+- it does not generate any of the other nodes (last mod, change frequency, and priority)
+
+Luckily, it is pretty easy to use liquid to loop through the documents in the site and build a sitemap very similar to how we generate our rss feed.  David Singer writes on this in [generating a sitemap in jekyll without a plugin](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/)
+
+
+[freefind]:      http://freefind.com
+[deanlab github repo]: https://github.com/deanlab/deanlab.github.io
